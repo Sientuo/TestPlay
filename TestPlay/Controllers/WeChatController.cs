@@ -1,16 +1,11 @@
 ﻿using Senparc.Weixin.MP;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using System.Xml;
 using System.Xml.Linq;
-using TestPlay.Help;
-using WetChat.Helper;
+using TestComm.Helper;
 
 namespace TestPlay.Controllers
 {
@@ -18,10 +13,6 @@ namespace TestPlay.Controllers
     {
         // GET: WeChat
         //回复消息
-        //public string AppId = "wxa6081d07acd03286";
-        //public string Token = "srgtrh4561sdf";
-        //public string EncodingAesKey = "BxiNRl4L33KAdymESW6vSBiwayezcgcXRsvNH9HBKkf";
-
         [HttpGet]
         [ActionName("Index")]
         public Task<ActionResult> Get(string signature, string timestamp, string nonce, string echostr)
@@ -113,7 +104,6 @@ namespace TestPlay.Controllers
             responseContent = ResMessgeHelper.ReceivedText(FromUserName, ToUserName, Content);
             return responseContent;
         }
-
 
         public string ImageHandle(XElement xmlimg)
         {

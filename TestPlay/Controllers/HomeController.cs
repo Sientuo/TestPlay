@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using TestComm.Helper;
 using WxPayAPI;
 
 namespace TestPlay.Controllers
@@ -28,8 +29,6 @@ namespace TestPlay.Controllers
 
             return Json(data, JsonRequestBehavior.AllowGet);
         }
-
-
 
         /// <summary>
         /// 模式一

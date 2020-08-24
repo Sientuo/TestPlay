@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Xml.Linq;
 
-namespace TestPlay.Help
+namespace TestComm.Helper
 {
     public class ConfigHelper
     {
@@ -30,7 +30,7 @@ namespace TestPlay.Help
             }
             catch (Exception ex)
             {
-                //LogHelper.ErrLogQueue.Enqueue(ex.Message + "--" + ex.StackTrace);
+                LogHelper.WriteError("读取配置文件失败:" + ex.Message);
                 return des;
             }
         }
@@ -50,7 +50,7 @@ namespace TestPlay.Help
             }
             catch (Exception ex)
             {
-                //LogHelper.ErrLogQueue.Enqueue(ex.Message + "---" + ex.StackTrace);
+                LogHelper.WriteError("写入缓存失败:" + ex.Message);
             }
         }
 
@@ -70,8 +70,8 @@ namespace TestPlay.Help
             }
             catch (Exception ex)
             {
-                return null;
-                //LogHelper.ErrLogQueue.Enqueue(ex.Message + "--" + ex.StackTrace);
+                LogHelper.WriteError("缓存读取失败:" + ex.Message);
+                return string.Empty;
             }
         }
     }

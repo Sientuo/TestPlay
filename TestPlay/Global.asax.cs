@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using TestPlay.Help;
+using TestComm.Helper;
 
 namespace TestPlay
 {
@@ -14,7 +14,6 @@ namespace TestPlay
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
 
             //写入配置文件到缓存
             ConfigHelper.ExitCache("AppId");

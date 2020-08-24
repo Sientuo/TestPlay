@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using TestComm.Helper;
 using WxPayAPI;
 
 namespace TestPlay.Controllers
@@ -42,6 +43,8 @@ namespace TestPlay.Controllers
                 WxPayData res = new WxPayData();
                 res.SetValue("return_code", "FAIL");
                 res.SetValue("return_msg", "统一下单失败");
+
+                LogHelper.WriteError("统一下单失败：" + ex.Message);
                 return res.ToXml();
             }
             //若下单失败，则立即返回结果给微信支付后台

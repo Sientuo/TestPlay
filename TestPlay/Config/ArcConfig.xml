@@ -3,7 +3,8 @@
 
   <AppId>wxa6081d07acd03286</AppId>
   <Token>srgtrh4561sdf</Token>
+  
   <EncodingAesKey>BxiNRl4L33KAdymESW6vSBiwayezcgcXRsvNH9HBKkf</EncodingAesKey>
-
+  <AppSecret>150c29b922e5d0fabc368320ccb8597f</AppSecret>
   <CurrentTokenPath>D:\Kiaser\VSPro\Test\TestPlay\TestPlay\Config\AccessToken.xml</CurrentTokenPath>
 </xml>

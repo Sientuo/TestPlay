@@ -1,10 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System;
 
-namespace WetChat.Helper
+namespace TestComm.Helper
 {
     public class ResMessgeHelper
     {

@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Web;
 
-namespace WetChat.Helper
+namespace TestComm.Helper
 {
     public class JsonHelper
     {
