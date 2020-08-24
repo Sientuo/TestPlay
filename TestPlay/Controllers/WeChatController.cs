@@ -13,6 +13,10 @@ namespace TestPlay.Controllers
     {
         // GET: WeChat
         //回复消息
+        //public string AppId = "wxa6081d07acd03286";
+        //public string Token = "srgtrh4561sdf";
+        //public string EncodingAesKey = "BxiNRl4L33KAdymESW6vSBiwayezcgcXRsvNH9HBKkf";
+
         [HttpGet]
         [ActionName("Index")]
         public Task<ActionResult> Get(string signature, string timestamp, string nonce, string echostr)
