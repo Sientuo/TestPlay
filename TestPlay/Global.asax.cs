@@ -17,6 +17,8 @@ namespace TestPlay
 
             //写入配置文件到缓存
             ConfigHelper.ExitCache("AppId");
+
+            LogHelper.WiteInfo("开始工作");
         }
     }
 }

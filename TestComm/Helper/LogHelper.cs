@@ -11,7 +11,7 @@ namespace TestComm.Helper
     {
         private static Logger Loger { get; set; }
 
-        public LogHelper()
+        static LogHelper()
         {
             Loger = LogManager.GetCurrentClassLogger();
         }
