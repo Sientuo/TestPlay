@@ -958,6 +958,10 @@
     <Folder Include="Views\WeChat\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TestBLL\TestBLL.csproj">
+      <Project>{47FE1962-5C55-482C-AF46-368F28D676BE}</Project>
+      <Name>TestBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestComm\TestComm.csproj">
       <Project>{D010F3CE-3A35-42FD-AACF-5B9D15E60690}</Project>
       <Name>TestComm</Name>

@@ -22,25 +22,11 @@ namespace TestComm.Helper
             string token = string.Empty;
             DateTime youXRQ;
             // 读取XML文件中的数据，并显示出来 ，注意文件路径
-            //string filepath = HttpContext.Current.Server.MapPath(".") + "\\Config" + "\\AccessToken.xml";
             string filepath = ConfigHelper.ExitCache("CurrentTokenPath");
-
-            //StreamReader str = new StreamReader(filepath, Encoding.UTF8);
-            //    XmlDocument xml = new XmlDocument();
-            //    xml.Load(str);
-            //    str.Close();
-            //    str.Dispose();
-            //    Token = xml.SelectSingleNode("xml").SelectSingleNode("Access_Token").InnerText;
-            //    YouXRQ = Convert.ToDateTime(xml.SelectSingleNode("xml").SelectSingleNode("Access_YouXRQ").InnerText);
-
-
             XElement xml = XElement.Load(filepath);
             token = xml.Descendants("Access_Token").FirstOrDefault().Value.ToString();
             youXRQ = Convert.ToDateTime(xml.Descendants("Access_YouXRQ").FirstOrDefault().Value.ToString());
-
-            //TimeSpan st1 = new TimeSpan(YouXRQ.Ticks); //最后刷新的时间
-            //TimeSpan st2 = new TimeSpan(DateTime.Now.Ticks); //当前时间
-            //TimeSpan st = st2 - st1; //两者相差时间
+            //判断当前 token 是否过期
             if (DateTime.Now > youXRQ)
             {
                 DateTime _youxrq = DateTime.Now;
@@ -52,11 +38,6 @@ namespace TestComm.Helper
                 xml.Save(filepath);
                 token = mode.access_token;
 
-                //xml.SelectSingleNode("xml").SelectSingleNode("Access_Token").InnerText = mode.access_token;
-                //_youxrq = _youxrq.AddSeconds(int.Parse(mode.expires_in));
-                //xml.SelectSingleNode("xml").SelectSingleNode("Access_YouXRQ").InnerText = _youxrq.ToString();
-                //xml.Save(filepath);
-                //Token = mode.access_token;
             }
             return token;
         }
@@ -73,13 +54,11 @@ namespace TestComm.Helper
 
             string strUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret=" + secret;
             Access_token mode = new Access_token();
-
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create(strUrl);  //用GET形式请求指定的地址 
             req.Method = "GET";
 
             using (WebResponse wr = req.GetResponse())
             {
-                //HttpWebResponse myResponse = (HttpWebResponse)req.GetResponse();  
                 StreamReader reader = new StreamReader(wr.GetResponseStream(), Encoding.UTF8);
                 string content = reader.ReadToEnd();
                 reader.Close();
