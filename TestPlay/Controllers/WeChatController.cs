@@ -1,4 +1,5 @@
 ﻿using Senparc.Weixin.MP;
+using Senparc.Weixin.MP.Entities.Request;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -37,7 +38,7 @@ namespace TestPlay.Controllers
 
         [HttpPost]
         [ActionName("Index")]
-        public void Post(Senparc.Weixin.MP.Entities.Request.PostModel postModel)
+        public void Post(PostModel postModel)
         {
             //校验签名
             var token = CacheHelper.GetCache("Token").ToString();

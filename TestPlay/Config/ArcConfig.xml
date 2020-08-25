@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <xml>
 
-  <AppId>wxa6081d07acd03286</AppId>
-  <Token>srgtrh4561sdf</Token>
+  <AppId></AppId>
+  <Token></Token>
   
-  <EncodingAesKey>BxiNRl4L33KAdymESW6vSBiwayezcgcXRsvNH9HBKkf</EncodingAesKey>
-  <AppSecret>150c29b922e5d0fabc368320ccb8597f</AppSecret>
+  <EncodingAesKey></EncodingAesKey>
+  <AppSecret></AppSecret>
   <CurrentTokenPath>D:\Kiaser\VSPro\Test\TestPlay\TestPlay\Config\AccessToken.xml</CurrentTokenPath>
 </xml>
