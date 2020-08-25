@@ -10,6 +10,7 @@ using System.Net;
 using System.Web.Security;
 using LitJson;
 
+
 namespace WxPayAPI
 {
     public class JsApiPay
