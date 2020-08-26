@@ -4,18 +4,14 @@ using System.Web;
 using System.Xml;
 using System.Security.Cryptography;
 using System.Text;
-using WxPayAPI.lib;
 using LitJson;
 using System.Linq;
 using System.Web.Security;
 
 
 
-namespace WxPayAPI
+namespace TestComm.PayBase
 {
-
-
-
     /// <summary>
     /// 微信支付协议接口数据类，所有的API接口通信都依赖这个数据结构，
     /// 在调用接口之前先填充各个字段的值，然后进行接口通信，

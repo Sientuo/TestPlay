@@ -4,7 +4,7 @@
   <AppId></AppId>
   <Token></Token>
   
-  <EncodingAesKey>1</EncodingAesKey>
+  <EncodingAesKey></EncodingAesKey>
   <AppSecret></AppSecret>
   <CurrentTokenPath>D:\Kiaser\VSPro\Test\TestPlay\TestPlay\Config\AccessToken.xml</CurrentTokenPath>
 </xml>

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using TestComm.PayBase;
 
-namespace WxPayAPI
+namespace TestComm.PayHelper
 {
     public class RefundQuery
     {

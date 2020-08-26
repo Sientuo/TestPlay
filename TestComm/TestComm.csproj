@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LitJson">
+      <HintPath>..\TestPlay\bin\LitJson.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -67,6 +70,26 @@
     <Compile Include="Helper\ResMessageHelper.cs" />
     <Compile Include="Helper\SendTempletHelper.cs" />
     <Compile Include="Helper\TokenHelper.cs" />
+    <Compile Include="PayBase\Config.cs" />
+    <Compile Include="PayBase\Data.cs" />
+    <Compile Include="PayBase\DemoConfig.cs" />
+    <Compile Include="PayBase\Exception.cs" />
+    <Compile Include="PayBase\HttpService.cs" />
+    <Compile Include="PayBase\IConfig.cs" />
+    <Compile Include="PayBase\Log.cs" />
+    <Compile Include="PayBase\Notify.cs" />
+    <Compile Include="PayBase\RandomGenerator.cs" />
+    <Compile Include="PayBase\SafeXmlDocument.cs" />
+    <Compile Include="PayBase\WxPayApi.cs" />
+    <Compile Include="PayHelper\DownloadBill.cs" />
+    <Compile Include="PayHelper\JsApiPay.cs" />
+    <Compile Include="PayHelper\MicroPay.cs" />
+    <Compile Include="PayHelper\NativeNotify.cs" />
+    <Compile Include="PayHelper\NativePay.cs" />
+    <Compile Include="PayHelper\OrderQuery.cs" />
+    <Compile Include="PayHelper\Refund.cs" />
+    <Compile Include="PayHelper\RefundQuery.cs" />
+    <Compile Include="PayHelper\ResultNotify.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -82,5 +105,6 @@
       <Name>TestModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

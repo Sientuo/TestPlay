@@ -910,32 +910,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="business\DownloadBill.cs" />
-    <Compile Include="business\JsApiPay.cs" />
-    <Compile Include="business\MicroPay.cs" />
-    <Compile Include="business\NativeNotify.cs" />
-    <Compile Include="business\NativePay.cs" />
-    <Compile Include="business\OrderQuery.cs" />
-    <Compile Include="business\Refund.cs" />
-    <Compile Include="business\RefundQuery.cs" />
-    <Compile Include="business\ResultNotify.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NativeNotifyController.cs" />
     <Compile Include="Controllers\WeChatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="lib\Config.cs" />
-    <Compile Include="lib\Data.cs" />
-    <Compile Include="lib\DemoConfig.cs" />
-    <Compile Include="lib\Exception.cs" />
-    <Compile Include="lib\HttpService.cs" />
-    <Compile Include="lib\IConfig.cs" />
-    <Compile Include="lib\Log.cs" />
-    <Compile Include="lib\Notify.cs" />
-    <Compile Include="lib\RandomGenerator.cs" />
-    <Compile Include="lib\SafeXmlDocument.cs" />
-    <Compile Include="lib\WxPayApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

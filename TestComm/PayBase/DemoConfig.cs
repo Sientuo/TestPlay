@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WxPayAPI.lib
+namespace TestComm.PayBase
 {
     public class DemoConfig:IConfig
     {

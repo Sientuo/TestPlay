@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Threading;
+using TestComm.PayBase;
 
-namespace WxPayAPI
+namespace TestComm.PayHelper
 {
     public class MicroPay
     {
@@ -17,7 +18,7 @@ namespace WxPayAPI
         */
         public static string Run(string body, string total_fee, string auth_code)
         {
-            Log.Info("MicroPay", "Micropay is processing...");
+            //Log.Info("MicroPay", "Micropay is processing...");
 
             WxPayData data = new WxPayData();
             data.SetValue("auth_code", auth_code);//授权码

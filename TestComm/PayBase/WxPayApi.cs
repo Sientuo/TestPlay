@@ -5,9 +5,7 @@ using System.Net;
 using System.IO;
 using System.Text;
 
-using WxPayAPI.lib;
-
-namespace WxPayAPI
+namespace TestComm.PayBase
 {
     public class WxPayApi
     {

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TestComm.PayBase;
 
-namespace WxPayAPI
+namespace TestComm.PayHelper
 {
     /// <summary>
     /// 扫码支付模式一回调处理类

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using WxPayAPI.lib;
 
-namespace WxPayAPI
+namespace TestComm.PayBase
 {
     /**
     * 	配置账号信息

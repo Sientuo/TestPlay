@@ -9,9 +9,9 @@ using System.Text;
 using System.Net;
 using System.Web.Security;
 using LitJson;
+using TestComm.PayBase;
 
-
-namespace WxPayAPI
+namespace TestComm.PayHelper
 {
     public class JsApiPay
     {
@@ -129,12 +129,12 @@ namespace WxPayAPI
                 //获取用户openid
                 openid = (string)jd["openid"];
 
-                Log.Debug(this.GetType().ToString(), "Get openid : " + openid);
-                Log.Debug(this.GetType().ToString(), "Get access_token : " + access_token);
+                //Log.Debug(this.GetType().ToString(), "Get openid : " + openid);
+                //Log.Debug(this.GetType().ToString(), "Get access_token : " + access_token);
             }
             catch (Exception ex)
             {
-                Log.Error(this.GetType().ToString(), ex.ToString());
+                //Log.Error(this.GetType().ToString(), ex.ToString());
                 throw new WxPayException(ex.ToString());
             }
         }

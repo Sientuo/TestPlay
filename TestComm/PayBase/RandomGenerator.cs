@@ -2,7 +2,7 @@
 using System.Security;
 using System.Security.Cryptography;
 
-namespace WxPayAPI.lib
+namespace TestComm.PayBase
 {
     public class RandomGenerator
     {

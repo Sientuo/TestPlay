@@ -5,7 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using TestComm.Helper;
-using WxPayAPI;
+using TestComm.PayBase;
 
 namespace TestPlay.Controllers
 {

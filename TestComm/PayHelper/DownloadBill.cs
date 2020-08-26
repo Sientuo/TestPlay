@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using TestComm.PayBase;
 
-namespace WxPayAPI
+namespace TestComm.PayHelper
 {
     public class DownloadBill
     {
@@ -18,7 +19,7 @@ namespace WxPayAPI
          */
         public static string Run(string bill_date, string bill_type)
         {
-            Log.Info("DownloadBill", "DownloadBill is processing...");
+            //Log.Info("DownloadBill", "DownloadBill is processing...");
 
             WxPayData data = new WxPayData();
             data.SetValue("bill_date", bill_date);//账单日期

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Xml;
-namespace WxPayAPI.lib
+namespace TestComm.PayBase
 {
     public class SafeXmlDocument:XmlDocument
     {
