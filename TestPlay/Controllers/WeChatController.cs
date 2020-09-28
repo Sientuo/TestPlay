@@ -22,11 +22,11 @@ namespace TestPlay.Controllers
         {
             return Task.Factory.StartNew(() =>
             {
-                var token = ConfigHelper.ExitCache("Token");
+                var token = ConfigHelper.GetCacheValue("Token").ToStr();
                 if (CheckSignature.Check(signature, timestamp, nonce, token))
                 {
                     //获取Token
-                    var acestoken = TokenHelper.IsExistAccess_Token();
+                    var acestoken = TokenHelper.GetStringToken();
                     return echostr; //返回随机字符串则表示验证通过
                 }
                 else
@@ -41,10 +41,11 @@ namespace TestPlay.Controllers
         public void Post(PostModel postModel)
         {
             //校验签名
-            var token = CacheHelper.GetCache("Token").ToString();
+            var token = ConfigHelper.GetCacheValue("Token").ToStr();
             if (!CheckSignature.Check(postModel.Signature, postModel.Timestamp, postModel.Nonce, token))
             {
-                System.Web.HttpContext.Current.Response.Write("参数验证失败");
+                //System.Web.HttpContext.Current.Response.Write("参数验证失败");
+                LogHelper.WriteError("签名验证失败");
                 return;
             }
             string postString = string.Empty;

@@ -1,0 +1,1 @@
+2020-08-27 17:02:26.8568 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo

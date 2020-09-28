@@ -1,0 +1,8 @@
+2020-09-28 11:26:02.2725 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 11:27:44.4633 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 11:59:52.0446 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 12:07:39.4123 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 12:08:39.9407 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 13:48:11.0793 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 13:49:00.2831 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo
+2020-09-28 13:49:34.1820 Info 开始工作 RuntimeMethodHandle.InvokeMethod => MvcApplication.Application_Start => LogHelper.WiteInfo

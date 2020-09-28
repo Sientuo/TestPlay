@@ -36,8 +36,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LitJson">
-      <HintPath>..\TestPlay\bin\LitJson.dll</HintPath>
+    <Reference Include="LitJSON, Version=0.16.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LitJson.0.16.0\lib\net45\LitJSON.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -67,8 +67,10 @@
     <Compile Include="Helper\ExtendHelper.cs" />
     <Compile Include="Helper\JsonHelper.cs" />
     <Compile Include="Helper\LogHelper.cs" />
+    <Compile Include="Helper\PasswordHelper.cs" />
     <Compile Include="Helper\ResMessageHelper.cs" />
     <Compile Include="Helper\SendTempletHelper.cs" />
+    <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Helper\TokenHelper.cs" />
     <Compile Include="PayBase\Config.cs" />
     <Compile Include="PayBase\Data.cs" />

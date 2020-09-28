@@ -1,10 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xml>
-
-  <AppId></AppId>
-  <Token></Token>
-  
-  <EncodingAesKey></EncodingAesKey>
-  <AppSecret></AppSecret>
-  <CurrentTokenPath>D:\Kiaser\VSPro\Test\TestPlay\TestPlay\Config\AccessToken.xml</CurrentTokenPath>
+  <AppId>wxa6081d07acd03286</AppId>
+  <Token>srgtrh4561sdf</Token>
+  <AppSecret>150c29b922e5d0fabc368320ccb8597f</AppSecret>
+  <EncodingAesKey>BxiNRl4L33KAdymESW6vSBiwayezcgcXRsvNH9HBKkf</EncodingAesKey>
+  <!--当前Token有效期-->
+  <Access_YouXRQ>2020/9/28 15:58:18</Access_YouXRQ>
+  <!--当前Token值-->
+  <Access_Token>37_2Bdvz5oNG85sF8T_1-mx_4caEew8Y3BcRKBhZYdIklXCfmL0YHcQSwAAvWIDx9qgxZ5Kj8AdK8lCfzeqbM0JgrRGWhqVvjk3s6_gOZsrk8EENf2guH0UsSwJiBgowNltSA1RQpWDfhxcU4FVOOEaACAUUK</Access_Token>
 </xml>

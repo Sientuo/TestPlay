@@ -62,12 +62,33 @@ namespace TestComm.Helper
                      "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>" +
                      "<CreateTime>" + DateTime.Now + "</CreateTime>" +
                      "<MsgType><![CDATA[voice]]></MsgType>" +
+                     "<Video>" +
+                     "<MediaId><![CDATA[" + content + "]]></MediaId>" +
+                     "</Video>" +
+                     "</xml>";
+            return textpl;
+        }
+
+        /// <summary>
+        /// 视频消息
+        /// </summary>
+        /// <param name="FromUserName"></param>
+        /// <param name="ToUserName"></param>
+        /// <param name="Content"></param>
+        /// <returns></returns>
+        public static string ReceivedVideo(string FromUserName, string ToUserName, string content)
+        {
+            string textpl = string.Empty;
+            textpl = "<xml>" +
+                     "<ToUserName><![CDATA[" + FromUserName + "]]></ToUserName>" +
+                     "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>" +
+                     "<CreateTime>" + DateTime.Now + "</CreateTime>" +
+                     "<MsgType><![CDATA[video]]></MsgType>" +
                      "<Voice>" +
                      "<MediaId><![CDATA[" + content + "]]></MediaId>" +
                      "</Voice>" +
                      "</xml>";
             return textpl;
         }
-
     }
 }

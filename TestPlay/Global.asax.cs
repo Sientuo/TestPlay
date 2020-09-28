@@ -16,8 +16,7 @@ namespace TestPlay
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             //写入配置文件到缓存
-            ConfigHelper.ExitCache("AppId");
-
+            ConfigHelper.GetCacheValue("AppId");
             LogHelper.WiteInfo("开始工作");
         }
     }

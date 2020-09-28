@@ -12,7 +12,8 @@ namespace TestBLL
         /// <param name="postStr"></param>
         /// <returns></returns>
         public string DealMessage(string postStr)
-        {
+        { 
+            string content = string.Empty;
             var responseContent = string.Empty;
             XElement xml = XElement.Parse(postStr);
             //获取消息类型
@@ -21,20 +22,25 @@ namespace TestBLL
             string ToUserName = xml.Descendants("ToUserName").FirstOrDefault().Value.ToString();
             //发送方帐号（一个OpenID）
             string FromUserName = xml.Descendants("FromUserName").FirstOrDefault().Value.ToString();
-            //消息内容
-            string Content = xml.Descendants("MediaId").FirstOrDefault().Value.ToString();
             if (msgType != null)
             {
                 switch (msgType)
                 {
                     case "image":
-                        responseContent = ResMessgeHelper.ReceivedText(FromUserName, ToUserName, Content);
+                        content = xml.Descendants("MediaId").FirstOrDefault().Value.ToString();
+                        responseContent = ResMessgeHelper.ReceivedImg(FromUserName, ToUserName, content);
                         break;
                     case "text":
-                        responseContent = ResMessgeHelper.ReceivedImg(FromUserName, ToUserName, Content);
+                        content = xml.Descendants("Content").FirstOrDefault().Value.ToString();
+                        responseContent = ResMessgeHelper.ReceivedText(FromUserName, ToUserName, content);
                         break;
                     case "voice":
-                        responseContent = ResMessgeHelper.ReceivedVoice(FromUserName, ToUserName, Content);
+                        content = xml.Descendants("MediaId").FirstOrDefault().Value.ToString();
+                        responseContent = ResMessgeHelper.ReceivedVoice(FromUserName, ToUserName, content);
+                        break;
+                    case "video":
+                        content = xml.Descendants("MediaId").FirstOrDefault().Value.ToString();
+                        responseContent = ResMessgeHelper.ReceivedVideo(FromUserName, ToUserName, content);
                         break;
                     default:
                         break;

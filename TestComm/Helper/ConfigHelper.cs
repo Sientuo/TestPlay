@@ -9,7 +9,7 @@ namespace TestComm.Helper
     public class ConfigHelper
     {
         //取值
-        public static Dictionary<string, string> GetValue()
+        public static object ReadConfig(string key)
         {
             Dictionary<string, string> des = new Dictionary<string, string>();
             try
@@ -23,9 +23,10 @@ namespace TestComm.Helper
                     var quests = from c in root.Elements() select c;
                     foreach (var item in quests)
                     {
-                        des.Add(item.Name.LocalName, item.Value);
+                        //des.Add(item.Name.LocalName, item.Value);
+                        CacheHelper.SetCache(item.Name.LocalName, item.Value);
                     }
-                    return des;
+                    return CacheHelper.GetCache(key);
                 }
             }
             catch (Exception ex)
@@ -56,23 +57,9 @@ namespace TestComm.Helper
 
 
         //判断
-        public static string ExitCache(string key)
+        public static object GetCacheValue(string key)
         {
-            var resValue = CacheHelper.GetCache(key); 
-            try
-            {
-                if (resValue == null)
-                {
-                    SetConfigValue(GetValue());
-                    return CacheHelper.GetCache(key).ToString();
-                }
-                return resValue.ToString();
-            }
-            catch (Exception ex)
-            {
-                LogHelper.WriteError("缓存读取失败:" + ex.Message);
-                return string.Empty;
-            }
+            return CacheHelper.GetCache(key) ?? ReadConfig(key);
         }
     }
 }

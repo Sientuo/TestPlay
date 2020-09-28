@@ -15,7 +15,7 @@ namespace TestComm.Helper
             try
             {
                 #region 获取access_token
-                var acestoken = TokenHelper.IsExistAccess_Token();
+                var acestoken = TokenHelper.GetStringToken();
                 #endregion
 
                 foreach (var item in openId)

@@ -17,27 +17,24 @@ namespace TestComm.Helper
         /// </summary>
         /// <param name="datetime"></param>
         /// <returns></returns>
-        public static  string IsExistAccess_Token()
+        public static  string GetStringToken()
         {
             string token = string.Empty;
-            DateTime youXRQ;
-            // 读取XML文件中的数据，并显示出来 ，注意文件路径
-            string filepath = ConfigHelper.ExitCache("CurrentTokenPath");
-            XElement xml = XElement.Load(filepath);
-            token = xml.Descendants("Access_Token").FirstOrDefault().Value.ToString();
-            youXRQ = Convert.ToDateTime(xml.Descendants("Access_YouXRQ").FirstOrDefault().Value.ToString());
+            //Linq读取XML文件中的数据，并显示出来 ，注意文件路径
+            string xmlPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "Config" + "\\ArcConfig.xml";
+            token = ConfigHelper.GetCacheValue("Access_Token").ToStr();
+            DateTime lastTime = Convert.ToDateTime(ConfigHelper.GetCacheValue("Access_YouXRQ").ToStr());
             //判断当前 token 是否过期
-            if (DateTime.Now > youXRQ)
+            if (DateTime.Now > lastTime)
             {
                 DateTime _youxrq = DateTime.Now;
                 Access_token mode = GetAccess_token();
-
+                XElement xml = XElement.Load(xmlPath);
                 xml.Descendants("Access_Token").FirstOrDefault().Value = mode.access_token;
                 _youxrq = _youxrq.AddSeconds(int.Parse(mode.expires_in));
                 xml.Descendants("Access_YouXRQ").FirstOrDefault().Value= _youxrq.ToString();
-                xml.Save(filepath);
+                xml.Save(xmlPath);
                 token = mode.access_token;
-
             }
             return token;
         }
@@ -49,8 +46,8 @@ namespace TestComm.Helper
         /// <returns></returns>
         private static Access_token GetAccess_token()
         {
-            var appid = ConfigHelper.ExitCache("AppId");
-            var secret = ConfigHelper.ExitCache("AppSecret");
+            var appid = ConfigHelper.GetCacheValue("AppId").ToStr();
+            var secret = ConfigHelper.GetCacheValue("AppSecret").ToStr();
 
             string strUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + appid + "&secret=" + secret;
             Access_token mode = new Access_token();
